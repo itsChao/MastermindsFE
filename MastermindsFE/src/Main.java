@@ -11,12 +11,10 @@ public class Main {
         int randomColor3=r.nextInt(colors.length);
         int randomColor4=r.nextInt(colors.length);
 
-        System.out.println(colors[randomColor1]);
-        System.out.print(colors[randomColor2]);
-        System.out.print(colors[randomColor3]);
-        System.out.print(colors[randomColor4]);
-
-
+        System.out.print(colors[randomColor1] + " ");
+        System.out.print(colors[randomColor2] + " ");
+        System.out.print(colors[randomColor3] + " ");
+        System.out.println(colors[randomColor4]);
 
 
         Scanner color = new Scanner(System.in);
@@ -25,6 +23,6 @@ public class Main {
         String third = color.nextLine();
         String fourth = color.nextLine();
 
-        System.out.printf(first + " " + second + " " + third + " " + fourth);
+        System.out.println(first + " " + second + " " + third + " " + fourth);
     }
 }
