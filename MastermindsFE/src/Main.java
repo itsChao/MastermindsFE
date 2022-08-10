@@ -5,12 +5,13 @@ public class Main {
     public static void main(String[] args) {
 
 
-        String[] colors={"yellow", "red", "white", "blue", "pink", "orange"};
-        Random r=new Random();
-        int randomColor1=r.nextInt(colors.length);
-        int randomColor2=r.nextInt(colors.length);
-        int randomColor3=r.nextInt(colors.length);
-        int randomColor4=r.nextInt(colors.length);
+
+        String[] colors = {"yellow", "red", "white", "blue", "pink", "orange"};
+        Random r = new Random();
+        int randomColor1 = r.nextInt(colors.length);
+        int randomColor2 = r.nextInt(colors.length);
+        int randomColor3 = r.nextInt(colors.length);
+        int randomColor4 = r.nextInt(colors.length);
 
         System.out.print(colors[randomColor1] + " ");
         System.out.print(colors[randomColor2] + " ");
@@ -19,36 +20,39 @@ public class Main {
 
         for (int i = 0; i <= 12; i++) {
             int rightPosition = 0;
-        Scanner color = new Scanner(System.in);
-        String first = color.nextLine();
-        String second = color.nextLine();
-        String third = color.nextLine();
-        String fourth = color.nextLine();
+            Scanner inputColor = new Scanner(System.in);
+            String firstColorInput = inputColor.nextLine();
+            String secondColorInput = inputColor.nextLine();
+            String thirdColorInput = inputColor.nextLine();
+            String forthColorInput = inputColor.nextLine();
 
-        System.out.println(first + " " + second + " " + third + " " + fourth);
+            String[] colorCode = {(colors[randomColor1]), (colors[randomColor2]), (colors[randomColor3]), (colors[randomColor4])};
 
-            if (first.equals(colors[randomColor1])) {
+
+            System.out.println(firstColorInput + " " + secondColorInput + " " + thirdColorInput + " " + forthColorInput);
+
+            if (firstColorInput.equals(colors[randomColor1])) {
                 System.out.println("cool");
                 rightPosition++;
             } else {
                 System.out.println("not cool");
             }
 
-            if (second.equals(colors[randomColor2])) {
+            if (secondColorInput.equals(colors[randomColor2])) {
                 System.out.println("cool");
                 rightPosition++;
             } else {
                 System.out.println("not cool");
             }
 
-            if (third.equals(colors[randomColor3])) {
+            if (thirdColorInput.equals(colors[randomColor3])) {
                 System.out.println("cool");
                 rightPosition++;
             } else {
                 System.out.println("not cool");
             }
 
-            if (fourth.equals(colors[randomColor4])) {
+            if (forthColorInput.equals(colors[randomColor4])) {
                 System.out.println("cool");
                 rightPosition++;
             } else {
