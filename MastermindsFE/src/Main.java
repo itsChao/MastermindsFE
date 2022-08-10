@@ -16,7 +16,6 @@ public class Main {
         System.out.print(colors[randomColor3] + " ");
         System.out.println(colors[randomColor4]);
 
-
         Scanner color = new Scanner(System.in);
         String first = color.nextLine();
         String second = color.nextLine();
@@ -24,5 +23,10 @@ public class Main {
         String fourth = color.nextLine();
 
         System.out.println(first + " " + second + " " + third + " " + fourth);
+    if (first.equals(colors[randomColor1])){
+    System.out.println("cool");
+        }else{
+        System.out.println("not cool");
+    }
     }
 }
