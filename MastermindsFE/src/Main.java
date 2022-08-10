@@ -5,6 +5,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        System.out.println("\n" +
+                "  __  __           _                      _           _     \n" +
+                " |  \\/  |         | |                    (_)         | |    \n" +
+                " | \\  / | __ _ ___| |_ ___ _ __ _ __ ___  _ _ __   __| |___ \n" +
+                " | |\\/| |/ _` / __| __/ _ | '__| '_ ` _ \\| | '_ \\ / _` / __|\n" +
+                " | |  | | (_| \\__ | ||  __| |  | | | | | | | | | | (_| \\__ \\\n" +
+                " |_|  |_|\\__,_|___/\\__\\___|_|  |_| |_| |_|_|_| |_|\\__,_|___/\n" +
+                "                                                            \n");
+
+        System.out.println("Type in 4 colors you have 12 tries to guess the right combination");
+        System.out.println("The colors are: yellow, red, white, blue, pink and orange");
 
         String[] colors = {"yellow", "red", "white", "blue", "pink", "orange"};
         Random r = new Random();
@@ -15,10 +26,10 @@ public class Main {
 
         String[] colorcode = {(colors[randomColor1]), (colors[randomColor2]), (colors[randomColor3]), (colors[randomColor4])};
 
-        System.out.print(colors[randomColor1] + " ");
+        /*System.out.print(colors[randomColor1] + " ");
         System.out.print(colors[randomColor2] + " ");
         System.out.print(colors[randomColor3] + " ");
-        System.out.println(colors[randomColor4]);
+        System.out.println(colors[randomColor4]);*/
 
         for (int i = 0; i <= 11; i++) {
             int rightPosition = 0;
@@ -35,17 +46,17 @@ public class Main {
             if (first.equals(colors[randomColor1])) {
                 rightPosition++;
             } else {
-                for (int j = 0; j < colorcode.length ; j++) {
-                   if (first.equals(colorcode[j])){
-                       rightColor++;
-                   }
+                for (int j = 0; j < colorcode.length; j++) {
+                    if (first.equals(colorcode[j])) {
+                        rightColor++;
+                    }
                 }
             }
             if (second.equals(colors[randomColor2])) {
                 rightPosition++;
             } else {
-                for (int k = 0; k < colorcode.length ; k++) {
-                    if (second.equals(colorcode[k])){
+                for (int k = 0; k < colorcode.length; k++) {
+                    if (second.equals(colorcode[k])) {
                         rightColor++;
                     }
                 }
@@ -53,8 +64,8 @@ public class Main {
             if (third.equals(colors[randomColor3])) {
                 rightPosition++;
             } else {
-                for (int l = 0; l < colorcode.length ; l++) {
-                    if (third.equals(colorcode[l])){
+                for (int l = 0; l < colorcode.length; l++) {
+                    if (third.equals(colorcode[l])) {
                         rightColor++;
                     }
                 }
@@ -62,8 +73,8 @@ public class Main {
             if (fourth.equals(colors[randomColor4])) {
                 rightPosition++;
             } else {
-                for (int m = 0; m < colorcode.length ; m++) {
-                    if (fourth.equals(colorcode[m])){
+                for (int m = 0; m < colorcode.length; m++) {
+                    if (fourth.equals(colorcode[m])) {
                         rightColor++;
                     }
                 }
@@ -71,8 +82,9 @@ public class Main {
 
             System.out.println("Colors in the right position:" + rightPosition);
             System.out.println("Right colors, wrong position:" + rightColor);
+            System.out.println("The colors are: yellow, red, white, blue, pink and orange");
 
-            int triesLeft = 11-i;
+            int triesLeft = 11 - i;
 
             if (rightPosition == 4) {
                 System.out.println("you win");
