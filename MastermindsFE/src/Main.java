@@ -26,70 +26,95 @@ public class Main {
 
         String[] colorcode = {(colors[randomColor1]), (colors[randomColor2]), (colors[randomColor3]), (colors[randomColor4])};
 
-        /*System.out.print(colors[randomColor1] + " ");
+        System.out.print(colors[randomColor1] + " ");
         System.out.print(colors[randomColor2] + " ");
         System.out.print(colors[randomColor3] + " ");
-        System.out.println(colors[randomColor4]);*/
+        System.out.println(colors[randomColor4]);
 
         for (int i = 0; i <= 11; i++) {
-            int rightPosition = 0;
-            int rightColor = 0;
+            int correctPosition = 0;
+            int correctColor = 0;
 
             Scanner color = new Scanner(System.in);
-            String first = color.nextLine();
-            String second = color.nextLine();
-            String third = color.nextLine();
-            String fourth = color.nextLine();
+            String firstInput = color.nextLine();
+            String secondInput = color.nextLine();
+            String thirdInput = color.nextLine();
+            String fourthInput = color.nextLine();
 
-            System.out.println(first + " " + second + " " + third + " " + fourth);
+            System.out.println(firstInput + " " + secondInput + " " + thirdInput + " " + fourthInput);
 
-            if (first.equals(colors[randomColor1])) {
-                rightPosition++;
+            if (firstInput.equals(colors[randomColor1])) {
+                correctPosition++;
             } else {
-                for (int j = 0; j < colorcode.length; j++) {
-                    if (first.equals(colorcode[j])) {
-                        rightColor++;
+                for (int j = 0; j <= colorcode.length; j++) {
+                    if (firstInput.equals(colorcode[j]) && j != 0) {
+                        correctColor++;
+                        break;
                     }
                 }
             }
-            if (second.equals(colors[randomColor2])) {
-                rightPosition++;
+            if (secondInput.equals(colors[randomColor2])) {
+                correctPosition++;
             } else {
                 for (int k = 0; k < colorcode.length; k++) {
-                    if (second.equals(colorcode[k])) {
-                        rightColor++;
+                    if (secondInput.equals(colorcode[k]) && k != 0) {
+                        correctColor++;
+                        break;
                     }
                 }
             }
-            if (third.equals(colors[randomColor3])) {
-                rightPosition++;
+            if (thirdInput.equals(colors[randomColor3])) {
+                correctPosition++;
             } else {
                 for (int l = 0; l < colorcode.length; l++) {
-                    if (third.equals(colorcode[l])) {
-                        rightColor++;
+                    if (thirdInput.equals(colorcode[l]) && l != 0) {
+                        correctColor++;
+                        break;
                     }
                 }
             }
-            if (fourth.equals(colors[randomColor4])) {
-                rightPosition++;
+            if (fourthInput.equals(colors[randomColor4])) {
+                correctPosition++;
             } else {
                 for (int m = 0; m < colorcode.length; m++) {
-                    if (fourth.equals(colorcode[m])) {
-                        rightColor++;
+                    if (fourthInput.equals(colorcode[m]) && m != 0) {
+                        correctColor++;
+                        break;
                     }
                 }
             }
 
-            System.out.println("Colors in the right position:" + rightPosition);
-            System.out.println("Right colors, wrong position:" + rightColor);
+            System.out.println("Colors in the right position:" + correctPosition);
+            System.out.println("Right colors, wrong position:" + correctColor);
             System.out.println("The colors are: yellow, red, white, blue, pink and orange");
 
             int triesLeft = 11 - i;
-
-            if (rightPosition == 4) {
-                System.out.println("you win");
+            if (triesLeft == 0) {
+                System.out.println("\n" +
+                        "                 *             )            (     \n" +
+                        " (       (     (  `         ( /(            )\\ )  \n" +
+                        " )\\ )    )\\    )\\))(  (     )\\())(   (  (  (()/(  \n" +
+                        "(()/( ((((_)( ((_)()\\ )\\   ((_)\\ )\\  )\\ )\\  /(_)) \n" +
+                        " /(_))_)\\ _ )\\(_()((_|(_)    ((_|(_)((_|(_)(_))   \n" +
+                        "(_)) __(_)_\\(_)  \\/  | __|  / _ \\ \\ / /| __| _ \\  \n" +
+                        "  | (_ |/ _ \\ | |\\/| | _|  | (_) \\ V / | _||   /  \n" +
+                        "   \\___/_/ \\_\\|_|  |_|___|  \\___/ \\_/  |___|_|_\\  \n" +
+                        "                                                  \n");
+                System.exit(0);
             } else {
-                System.out.println("Wrong! You have " + triesLeft + " tries left");
+
+                if (correctPosition == 4) {
+                    System.out.println("\n" +
+                            " __   _____  _   _  __      _____ _  _ \n" +
+                            " \\ \\ / / _ \\| | | | \\ \\    / /_ _| \\| |\n" +
+                            "  \\ V / (_) | |_| |  \\ \\/\\/ / | || .` |\n" +
+                            "   |_| \\___/ \\___/    \\_/\\_/ |___|_|\\_|\n" +
+                            "                                       \n");
+                    System.exit(0);
+
+                } else {
+                    System.out.println("Wrong! You have " + triesLeft + " tries left");
+                }
             }
         }
     }
