@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -36,55 +35,62 @@ public class Main {
             int correctPosition = 0;
             int correctColor = 0;
 
-            Scanner color = new Scanner(System.in);
-            String firstInput = color.nextLine();
-            String secondInput = color.nextLine();
-            String thirdInput = color.nextLine();
-            String fourthInput = color.nextLine();
+            Scanner guessedColors = new Scanner(System.in);
+            String firstInput = guessedColors.nextLine();
+            String secondInput = guessedColors.nextLine();
+            String thirdInput = guessedColors.nextLine();
+            String fourthInput = guessedColors.nextLine();
+
+            String[] colorInput = {firstInput, secondInput, thirdInput, fourthInput};
+            String[] colorInputCopy = colorInput.clone();
 
             System.out.println(firstInput + " " + secondInput + " " + thirdInput + " " + fourthInput);
 
-            if (firstInput.equals(colorCodeCopy[0])) {
+            if (colorCode[0].equals(colorInputCopy[0])) {
                 correctPosition++;
                 colorCodeCopy[0] = "";
             }
-            if (secondInput.equals(colorCodeCopy[1])) {
+            if (colorCode[1].equals(colorInputCopy[1])) {
                 correctPosition++;
                 colorCodeCopy[1] = "";
             }
-            if (thirdInput.equals(colorCodeCopy[2])) {
+            if (colorCode[2].equals(colorInputCopy[2])) {
                 correctPosition++;
                 colorCodeCopy[2] = "";
             }
-            if (fourthInput.equals(colorCodeCopy[3])) {
+            if (colorCode[3].equals(colorInputCopy[3])) {
                 correctPosition++;
                 colorCodeCopy[3] = "";
             }
-            for (int j = 0; j < colorCodeCopy.length; j++) {
-                if (firstInput.equals(colorCodeCopy[j]) && j != 0) {
+            for (int j = 0; j < colorInputCopy.length; j++) {
+                if (colorCodeCopy[0].equals(colorInputCopy[j]) && j != 0) {
                     correctColor++;
+                    colorCodeCopy[0] = "";
                     break;
                 }
             }
 
-            for (int k = 0; k < colorCodeCopy.length; k++) {
-                if (secondInput.equals(colorCodeCopy[k]) && k != 1) {
+            for (int k = 0; k < colorInputCopy.length; k++) {
+                if (colorCodeCopy[1].equals(colorInputCopy[k]) && k != 1) {
                     correctColor++;
+                    colorCodeCopy[1] = "";
                     break;
                 }
             }
 
-            for (int l = 0; l < colorCodeCopy.length; l++) {
-                if (thirdInput.equals(colorCodeCopy[l]) && l != 2) {
+            for (int l = 0; l < colorInputCopy.length; l++) {
+                if (colorCodeCopy[2].equals(colorInputCopy[l]) && l != 2) {
                     correctColor++;
+                    colorCodeCopy[2] = "";
                     break;
                 }
             }
 
 
-            for (int m = 0; m < colorCodeCopy.length; m++) {
-                if (fourthInput.equals(colorCodeCopy[m]) && m != 3) {
+            for (int m = 0; m < colorInputCopy.length; m++) {
+                if (colorCodeCopy[3].equals(colorInputCopy[m]) && m != 3) {
                     correctColor++;
+                    colorCodeCopy[3] = "";
                     break;
                 }
             }
