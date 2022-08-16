@@ -56,7 +56,6 @@ public class Main {
                     }
                 }
 
-
                 for (int k = 0; k <= 3; k++) {
                     for (int j = 0; j < colorInputCopy.length; j++) {
                         if (colorCodeCopy[k].equals(colorInputCopy[j]) && j != k) {
@@ -124,7 +123,7 @@ public class Main {
 
 
                     } else {
-                        System.out.println("Wrong! You have " + triesLeft + " tries left");
+                        System.out.println("Tries left: " + triesLeft);
                     }
                 }
             }
