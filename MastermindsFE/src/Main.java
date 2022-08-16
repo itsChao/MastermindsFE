@@ -28,10 +28,10 @@ public class Main {
             String[] colorCode = {(colors[randomColor1]), (colors[randomColor2]), (colors[randomColor3]), (colors[randomColor4])};
             String[] colorCodeCopy = colorCode.clone();
 
-            /*System.out.print(colors[randomColor1] + " ");
+            System.out.print(colors[randomColor1] + " ");
             System.out.print(colors[randomColor2] + " ");
             System.out.print(colors[randomColor3] + " ");
-            System.out.println(colors[randomColor4]);*/
+            System.out.println(colors[randomColor4]);
 
 
             for (int i = 0; i <= 11; i++) {
@@ -49,52 +49,21 @@ public class Main {
 
                 System.out.println(firstInput + " " + secondInput + " " + thirdInput + " " + fourthInput);
 
-                if (colorCode[0].equals(colorInputCopy[0])) {
-                    correctPosition++;
-                    colorCodeCopy[0] = "";
-                }
-                if (colorCode[1].equals(colorInputCopy[1])) {
-                    correctPosition++;
-                    colorCodeCopy[1] = "";
-                }
-                if (colorCode[2].equals(colorInputCopy[2])) {
-                    correctPosition++;
-                    colorCodeCopy[2] = "";
-                }
-                if (colorCode[3].equals(colorInputCopy[3])) {
-                    correctPosition++;
-                    colorCodeCopy[3] = "";
-                }
-                for (int j = 0; j < colorInputCopy.length; j++) {
-                    if (colorCodeCopy[0].equals(colorInputCopy[j]) && j != 0) {
-                        correctColor++;
-                        colorCodeCopy[0] = "";
-                        break;
-                    }
-                }
-
-                for (int k = 0; k < colorInputCopy.length; k++) {
-                    if (colorCodeCopy[1].equals(colorInputCopy[k]) && k != 1) {
-                        correctColor++;
-                        colorCodeCopy[1] = "";
-                        break;
-                    }
-                }
-
-                for (int l = 0; l < colorInputCopy.length; l++) {
-                    if (colorCodeCopy[2].equals(colorInputCopy[l]) && l != 2) {
-                        correctColor++;
-                        colorCodeCopy[2] = "";
-                        break;
+                for (int j = 0; j <= 3; j++) {
+                    if (colorCode[j].equals(colorInputCopy[j])) {
+                        correctPosition++;
+                        colorCodeCopy[j] = "";
                     }
                 }
 
 
-                for (int m = 0; m < colorInputCopy.length; m++) {
-                    if (colorCodeCopy[3].equals(colorInputCopy[m]) && m != 3) {
-                        correctColor++;
-                        colorCodeCopy[3] = "";
-                        break;
+                for (int k = 0; k <= 3; k++) {
+                    for (int j = 0; j < colorInputCopy.length; j++) {
+                        if (colorCodeCopy[k].equals(colorInputCopy[j]) && j != k) {
+                            correctColor++;
+                            colorCodeCopy[k] = "";
+                            break;
+                        }
                     }
                 }
 
@@ -126,7 +95,6 @@ public class Main {
                         playAgain = false;
                         break;
                     } else if (yesNo.equals("yes")){
-                        playAgain = true;
                         break;
                     }
 
@@ -151,7 +119,6 @@ public class Main {
                             break;
 
                         } else if (yesNo.equals("yes")){
-                            playAgain = true;
                             break;
                         }
 
