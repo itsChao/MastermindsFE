@@ -28,10 +28,10 @@ public class Main {
             String[] colorCode = {(colors[randomColor1]), (colors[randomColor2]), (colors[randomColor3]), (colors[randomColor4])};
             String[] colorCodeCopy = colorCode.clone();
 
-            System.out.print(colors[randomColor1] + " ");
+            /*System.out.print(colors[randomColor1] + " ");
             System.out.print(colors[randomColor2] + " ");
             System.out.print(colors[randomColor3] + " ");
-            System.out.println(colors[randomColor4]);
+            System.out.println(colors[randomColor4]);*/
 
 
             for (int i = 0; i <= 11; i++) {
